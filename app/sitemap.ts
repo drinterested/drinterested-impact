@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next"
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://impact2025.drinterested.tech"
+  const baseUrl = "https://impact2025.drinterested.org"
   const currentDate = new Date().toISOString()
 
   return [
@@ -12,37 +12,37 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: "https://drinterested.tech",
+      url: "https://drinterested.org",
       lastModified: currentDate,
       changeFrequency: "weekly",
       priority: 0.9,
     },
     {
-      url: "https://drinterested.tech/our-work",
+      url: "https://drinterested.org/our-work",
       lastModified: currentDate,
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: "https://drinterested.tech/members",
+      url: "https://drinterested.org/members",
       lastModified: currentDate,
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
-      url: "https://drinterested.tech/events",
+      url: "https://drinterested.org/events",
       lastModified: currentDate,
       changeFrequency: "weekly",
       priority: 0.8,
     },
     {
-      url: "https://drinterested.tech/blog",
+      url: "https://drinterested.org/blog",
       lastModified: currentDate,
       changeFrequency: "weekly",
       priority: 0.8,
     },
     {
-      url: "https://drinterested.tech/contact",
+      url: "https://drinterested.org/contact",
       lastModified: currentDate,
       changeFrequency: "yearly",
       priority: 0.6,

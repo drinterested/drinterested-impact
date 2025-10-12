@@ -6,17 +6,17 @@ export const metadata: Metadata = {
   description:
     "Explore Dr. Interested's comprehensive 2025 Semi-Annual Impact Report showcasing measurable outcomes in healthcare education. Discover how we've empowered 500+ high school students through mentorship programs, research opportunities, and career development initiatives. View detailed metrics, student success stories, and community impact data from July-December 2024.",
   alternates: {
-    canonical: "https://impact2025.drinterested.tech",
+    canonical: "https://impact2025.drinterested.org",
   },
   openGraph: {
     title: "Dr. Interested 2025 Impact Report - Transforming Healthcare Education for High School Students",
     description:
       "📊 Our comprehensive 2025 Semi-Annual Impact Report reveals how Dr. Interested has successfully empowered over 500 high school students to explore healthcare careers. Discover detailed program metrics, inspiring student success stories, measurable community impact, and evidence-based outcomes from our innovative mentorship and education initiatives.",
-    url: "https://impact2025.drinterested.tech",
+    url: "https://impact2025.drinterested.org",
     siteName: "Dr. Interested Impact Report",
     images: [
       {
-        url: "https://impact2025.drinterested.tech/impact-report-og.png",
+        url: "https://impact2025.drinterested.org/impact-report-og.png",
         width: 1200,
         height: 630,
         alt: "Dr. Interested 2025 Semi-Annual Impact Report - Healthcare Education Impact Dashboard",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     title: "🏥 Dr. Interested 2025 Impact Report - Healthcare Education Success Stories",
     description:
       "📈 500+ students empowered | 🎓 Healthcare career pathways opened | 🤝 Mentorship programs expanded | View our comprehensive impact assessment! #HealthcareEducation #StudentSuccess #MedicalCareers #ImpactReport",
-    images: ["https://impact2025.drinterested.tech/impact-report-twitter.png"],
+    images: ["https://impact2025.drinterested.org/impact-report-twitter.png"],
   },
   keywords: [
     "Dr. Interested 2025 impact report",
@@ -83,14 +83,14 @@ export default function ImpactReportPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebPage",
-            "@id": "https://impact2025.drinterested.tech/#webpage",
-            url: "https://impact2025.drinterested.tech",
+            "@id": "https://impact2025.drinterested.org/#webpage",
+            url: "https://impact2025.drinterested.org",
             name: "Dr. Interested 2025 Semi-Annual Impact Report",
             description:
               "Comprehensive impact assessment showcasing Dr. Interested's healthcare education program outcomes and student success metrics",
             isPartOf: {
               "@type": "WebSite",
-              "@id": "https://impact2025.drinterested.tech/#website",
+              "@id": "https://impact2025.drinterested.org/#website",
             },
             about: {
               "@type": "Thing",
@@ -107,13 +107,13 @@ export default function ImpactReportPage() {
                   "@type": "ListItem",
                   position: 1,
                   name: "Dr. Interested",
-                  item: "https://drinterested.tech",
+                  item: "https://drinterested.org",
                 },
                 {
                   "@type": "ListItem",
                   position: 2,
                   name: "2025 Impact Report",
-                  item: "https://impact2025.drinterested.tech",
+                  item: "https://impact2025.drinterested.org",
                 },
               ],
             },

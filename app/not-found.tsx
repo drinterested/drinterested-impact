@@ -32,7 +32,7 @@ export default function NotFound() {
             View Impact Report
           </Link>
           <Link
-            href="https://drinterested.tech"
+            href="https://drinterested.org"
             className="flex items-center justify-center gap-2 bg-[#4ecdc4] text-white hover:bg-[#3db8b8] px-6 py-3 rounded-md font-medium transition-all hover:shadow-md hover:scale-105 duration-300"
           >
             <ArrowLeft className="h-4 w-4" />

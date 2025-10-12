@@ -46,7 +46,7 @@ export function generateSeoMetadata({
         article: {
           publishedTime,
           modifiedTime,
-          authors: authors?.map((author) => `https://drinterested.tech/members#${author}`),
+          authors: authors?.map((author) => `https://drinterested.org/members#${author}`),
           tags,
         },
       }),
@@ -83,8 +83,8 @@ export function generateOrganizationSchema() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Dr. Interested",
-    url: "https://drinterested.tech",
-    logo: "https://drinterested.tech/logo.png",
+    url: "https://drinterested.org",
+    logo: "https://drinterested.org/logo.png",
     sameAs: [
       "https://www.instagram.com/dr.interested/",
       "https://www.linkedin.com/company/dr-interested",
@@ -94,7 +94,7 @@ export function generateOrganizationSchema() {
       "Dr. Interested is a student-led organization empowering high school students to explore careers in healthcare through education, research, and mentorship.",
     contactPoint: {
       "@type": "ContactPoint",
-      email: "admin@drinterested.tech",
+      email: "admin@drinterested.org",
       contactType: "customer service",
     },
     keywords: "healthcare education, medical careers, high school students, volunteer hours, healthcare mentorship",
@@ -128,9 +128,9 @@ export function generateEventSchema(event: {
     organizer: {
       "@type": "Organization",
       name: event.organizer || "Dr. Interested",
-      url: "https://drinterested.tech",
+      url: "https://drinterested.org",
     },
-    image: event.image || "https://drinterested.tech/logo.png",
+    image: event.image || "https://drinterested.org/logo.png",
     url: event.url,
   }
 }
@@ -161,14 +161,14 @@ export function generateArticleSchema(article: {
       name: article.authorName,
       url:
         article.authorUrl ||
-        `https://drinterested.tech/members#${article.authorName.toLowerCase().replace(/\s+/g, "-")}`,
+        `https://drinterested.org/members#${article.authorName.toLowerCase().replace(/\s+/g, "-")}`,
     },
     publisher: {
       "@type": "Organization",
       name: article.publisherName || "Dr. Interested",
       logo: {
         "@type": "ImageObject",
-        url: article.publisherLogo || "https://drinterested.tech/circle-logo.png",
+        url: article.publisherLogo || "https://drinterested.org/circle-logo.png",
       },
     },
     mainEntityOfPage: {
