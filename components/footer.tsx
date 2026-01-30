@@ -74,7 +74,7 @@ export default function Footer() {
                 <Linkedin className="h-6 w-6" aria-hidden="true" />
               </Link>
               <Link
-                href="mailto:admin@drinterested.tech"
+                href="mailto:admin@drinterested.org"
                 className="text-gray-300 hover:text-[#4ecdc4] transition-colors hover:scale-110 duration-200"
                 aria-label="Email Dr. Interested"
               >
@@ -104,7 +104,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link
-                  href="https://drinterested.tech"
+                  href="https://www.drinterested.org"
                   className="text-gray-300 hover:text-white transition-colors flex items-center gap-1"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -114,7 +114,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="https://drinterested.tech/our-work"
+                  href="https://www.drinterested.org/our-work"
                   className="text-gray-300 hover:text-white transition-colors flex items-center gap-1"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -124,7 +124,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="https://drinterested.tech/events"
+                  href="https://www.drinterested.org/events"
                   className="text-gray-300 hover:text-white transition-colors flex items-center gap-1"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -134,7 +134,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="https://drinterested.tech/blog"
+                  href="https://www.drinterested.org/blog"
                   className="text-gray-300 hover:text-white transition-colors flex items-center gap-1"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -144,7 +144,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="https://drinterested.tech/members"
+                  href="https://www.drinterested.org/members"
                   className="text-gray-300 hover:text-white transition-colors flex items-center gap-1"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -154,7 +154,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="https://drinterested.tech/contact"
+                  href="https://www.drinterested.org/contact"
                   className="text-gray-300 hover:text-white transition-colors flex items-center gap-1"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -174,7 +174,7 @@ export default function Footer() {
             </div>
             <div className="flex items-center gap-6 text-sm">
               <Link
-                href="https://drinterested.tech/privacy-policy"
+                href="https://www.drinterested.org/privacy-policy"
                 className="text-gray-300 hover:text-white transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -182,7 +182,7 @@ export default function Footer() {
                 Privacy Policy
               </Link>
               <Link
-                href="https://drinterested.tech/terms"
+                href="https://www.drinterested.org/terms"
                 className="text-gray-300 hover:text-white transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"

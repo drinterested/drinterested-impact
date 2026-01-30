@@ -107,16 +107,34 @@ export default function AnnualReportPage() {
                   "@type": "ListItem",
                   position: 1,
                   name: "Dr. Interested",
-                  item: "https://drinterested.org",
+                  item: "https://www.drinterested.org",
                 },
                 {
                   "@type": "ListItem",
                   position: 2,
+                  name: "Impact Reports",
+                  item: "https://impact.drinterested.org",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 3,
                   name: "2025 Annual Impact Report",
                   item: "https://impact.drinterested.org/2025/annual",
                 },
               ],
             },
+            publisher: {
+              "@type": "Organization",
+              name: "Dr. Interested",
+              url: "https://www.drinterested.org",
+              logo: {
+                "@type": "ImageObject",
+                url: "https://www.drinterested.org/logo.png",
+              },
+            },
+            inLanguage: "en-US",
+            datePublished: "2026-01-07T00:00:00.000Z",
+            dateModified: new Date().toISOString(),
           }),
         }}
       />

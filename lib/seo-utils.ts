@@ -46,7 +46,7 @@ export function generateSeoMetadata({
         article: {
           publishedTime,
           modifiedTime,
-          authors: authors?.map((author) => `https://drinterested.org/members#${author}`),
+          authors: authors?.map((author) => `https://www.drinterested.org/members#${author}`),
           tags,
         },
       }),
@@ -83,8 +83,8 @@ export function generateOrganizationSchema() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Dr. Interested",
-    url: "https://drinterested.org",
-    logo: "https://drinterested.org/logo.png",
+    url: "https://www.drinterested.org",
+    logo: "https://www.drinterested.org/logo.png",
     sameAs: [
       "https://www.instagram.com/dr.interested/",
       "https://www.linkedin.com/company/dr-interested",
@@ -128,9 +128,9 @@ export function generateEventSchema(event: {
     organizer: {
       "@type": "Organization",
       name: event.organizer || "Dr. Interested",
-      url: "https://drinterested.org",
+      url: "https://www.drinterested.org",
     },
-    image: event.image || "https://drinterested.org/logo.png",
+    image: event.image || "https://www.drinterested.org/logo.png",
     url: event.url,
   }
 }
@@ -161,14 +161,14 @@ export function generateArticleSchema(article: {
       name: article.authorName,
       url:
         article.authorUrl ||
-        `https://drinterested.org/members#${article.authorName.toLowerCase().replace(/\s+/g, "-")}`,
+        `https://www.drinterested.org/members#${article.authorName.toLowerCase().replace(/\s+/g, "-")}`,
     },
     publisher: {
       "@type": "Organization",
       name: article.publisherName || "Dr. Interested",
       logo: {
         "@type": "ImageObject",
-        url: article.publisherLogo || "https://drinterested.org/circle-logo.png",
+        url: article.publisherLogo || "https://www.drinterested.org/circle-logo.png",
       },
     },
     mainEntityOfPage: {

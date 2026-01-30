@@ -56,8 +56,8 @@ export const metadata: Metadata = {
     "healthcare workforce preparation impact",
   ],
   authors: [
-    { name: "Adil Mukhi", url: "https://drinterested.org/members" },
-    { name: "Dr. Interested Team", url: "https://drinterested.org/members" },
+    { name: "Adil Mukhi", url: "https://www.drinterested.org/members" },
+    { name: "Dr. Interested Team", url: "https://www.drinterested.org/members" },
   ],
   creator: "Adil Mukhi - Founder and Executive Director, Dr. Interested",
   publisher: "Dr. Interested",
@@ -105,7 +105,7 @@ export const metadata: Metadata = {
         "annual impact",
         "healthcare education 2025",
       ],
-      authors: ["https://drinterested.org/members"],
+      authors: ["https://www.drinterested.org/members"],
     },
   },
   twitter: {
@@ -205,18 +205,18 @@ const impactReportSchema = {
     "@type": "Person",
     name: "Adil Mukhi",
     jobTitle: "Founder and Executive Director",
-    url: "https://drinterested.org/members",
+    url: "https://www.drinterested.org/members",
     organization: {
       "@type": "Organization",
       name: "Dr. Interested",
-      url: "https://drinterested.org",
+      url: "https://www.drinterested.org",
     },
   },
   contributor: {
     "@type": "Organization",
     name: "Dr. Interested",
-    url: "https://drinterested.org",
-    logo: "https://drinterested.org/logo.png",
+    url: "https://www.drinterested.org",
+    logo: "https://www.drinterested.org/logo.png",
     sameAs: [
       "https://www.instagram.com/dr.interested/",
       "https://www.linkedin.com/company/dr-interested",
@@ -226,7 +226,7 @@ const impactReportSchema = {
   publisher: {
     "@type": "Organization",
     name: "Dr. Interested",
-    url: "https://drinterested.org",
+    url: "https://www.drinterested.org",
     logo: {
       "@type": "ImageObject",
       url: "https://impact.drinterested.org/logo.png",
@@ -258,12 +258,12 @@ const impactReportSchema = {
     name: "Dr. Interested",
     description:
       "Student-led organization empowering high school students to explore healthcare careers through education, mentorship, and hands-on experiences",
-    url: "https://drinterested.org",
+    url: "https://www.drinterested.org",
   },
   isPartOf: {
     "@type": "WebSite",
     name: "Dr. Interested",
-    url: "https://drinterested.org",
+    url: "https://www.drinterested.org",
   },
   potentialAction: {
     "@type": "ReadAction",
@@ -274,10 +274,10 @@ const impactReportSchema = {
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
-  "@id": "https://drinterested.org/#organization",
+  "@id": "https://www.drinterested.org/#organization",
   name: "Dr. Interested",
   alternateName: ["Dr Interested", "Doctor Interested"],
-  url: "https://drinterested.org",
+  url: "https://www.drinterested.org",
   logo: "https://impact.drinterested.org/logo.png",
   image: "https://impact.drinterested.org/impact-report-preview.png",
   description:
@@ -315,7 +315,7 @@ const organizationSchema = {
       description: "Comprehensive program introducing students to various healthcare career paths",
       provider: {
         "@type": "Organization",
-        "@id": "https://drinterested.org/#organization",
+        "@id": "https://www.drinterested.org/#organization",
       },
       offers: {
         "@type": "Offer",
@@ -334,7 +334,7 @@ const organizationSchema = {
         },
         instructor: {
           "@type": "Organization",
-          "@id": "https://drinterested.org/#organization",
+          "@id": "https://www.drinterested.org/#organization",
         },
       },
       coursePrerequisites: "High school enrollment",
@@ -347,7 +347,7 @@ const organizationSchema = {
       description: "Hands-on research experience with healthcare professionals",
       provider: {
         "@type": "Organization",
-        "@id": "https://drinterested.org/#organization",
+        "@id": "https://www.drinterested.org/#organization",
       },
       offers: {
         "@type": "Offer",
@@ -397,7 +397,7 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 1,
       name: "Dr. Interested",
-      item: "https://drinterested.org",
+      item: "https://www.drinterested.org",
     },
     {
       "@type": "ListItem",
@@ -425,7 +425,7 @@ const websiteSchema = {
   publisher: {
     "@type": "Organization",
     name: "Dr. Interested",
-    url: "https://drinterested.org",
+    url: "https://www.drinterested.org",
   },
   potentialAction: {
     "@type": "SearchAction",
@@ -588,7 +588,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://www.google-analytics.com" />
 
         {/* DNS prefetch for performance optimization */}
-        <link rel="dns-prefetch" href="https://drinterested.org" />
+        <link rel="dns-prefetch" href="https://www.drinterested.org" />
 
         {/* Canonical and alternate links */}
         <link rel="canonical" href="https://impact.drinterested.org" />
@@ -606,7 +606,7 @@ export default function RootLayout({
           rel="alternate"
           type="application/rss+xml"
           title="Dr. Interested Updates"
-          href="https://drinterested.org/rss.xml"
+          href="https://www.drinterested.org/rss.xml"
         />
 
         {/* Sitemap reference */}

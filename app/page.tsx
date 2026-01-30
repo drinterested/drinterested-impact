@@ -107,7 +107,7 @@ export default function ImpactReportPage() {
                   "@type": "ListItem",
                   position: 1,
                   name: "Dr. Interested",
-                  item: "https://drinterested.org",
+                  item: "https://www.drinterested.org",
                 },
                 {
                   "@type": "ListItem",
@@ -117,6 +117,18 @@ export default function ImpactReportPage() {
                 },
               ],
             },
+            publisher: {
+              "@type": "Organization",
+              name: "Dr. Interested",
+              url: "https://www.drinterested.org",
+              logo: {
+                "@type": "ImageObject",
+                url: "https://www.drinterested.org/logo.png",
+              },
+            },
+            inLanguage: "en-US",
+            datePublished: "2026-01-07T00:00:00.000Z",
+            dateModified: new Date().toISOString(),
           }),
         }}
       />

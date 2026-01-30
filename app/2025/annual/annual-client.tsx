@@ -176,7 +176,7 @@ export default function AnnualReportClient() {
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <a
-                href="https://drinterested.org"
+                href="https://www.drinterested.org"
                 className="bg-white text-[#405862] hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-all hover:shadow-lg hover:scale-105 duration-300 flex items-center justify-center gap-2"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

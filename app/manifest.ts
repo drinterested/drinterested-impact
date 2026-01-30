@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "Dr. Interested 2025 Impact Report",
     short_name: "Dr. Interested Impact",
     description:
-      "Dr. Interested's comprehensive 2025 Semi-Annual Impact Report showcasing achievements in healthcare education and student mentorship programs.",
+      "Dr. Interested's comprehensive 2025 Annual Impact Report showcasing achievements in healthcare education across 160,000+ individuals in 106 countries with 367 executives, 1400 members, and 900 volunteers.",
     start_url: "/",
     display: "standalone",
     background_color: "#ffffff",

@@ -55,7 +55,7 @@ export default function Navbar() {
         {/* Left Section - Navigation */}
         <div className="flex items-center gap-4">
           <Link
-            href="https://drinterested.tech"
+            href="https://www.drinterested.org"
             className="flex items-center gap-2 text-sm font-medium text-[#405862] hover:text-[#4ecdc4] transition-colors group"
             aria-label="Return to Dr. Interested main website"
           >
