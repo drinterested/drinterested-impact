@@ -171,7 +171,6 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-gray-300 text-sm">
               <p>© {currentYear} Dr. Interested. All rights reserved.</p>
-              <p className="mt-1">A student-led organization dedicated to healthcare education and mentorship.</p>
             </div>
             <div className="flex items-center gap-6 text-sm">
               <Link
