@@ -13,13 +13,13 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: {
-    default: "Dr. Interested 2025 Semi-Annual Impact Report | Healthcare Education Impact Assessment",
-    template: "%s | Dr. Interested Impact Report 2025",
+    default: "Dr. Interested 2025 Annual Impact Report | Healthcare Education Impact Assessment",
+    template: "%s | Dr. Interested Impact Report",
   },
   description:
-    "Explore Dr. Interested's comprehensive 2025 Semi-Annual Impact Report showcasing measurable outcomes in healthcare education. Discover how we've empowered 500+ high school students through mentorship programs, research opportunities, and career development initiatives. View detailed metrics, student success stories, and community impact data from July-December 2024.",
+    "Explore Dr. Interested's comprehensive 2025 Annual Impact Report (January 7, 2025 - January 7, 2026) showcasing measurable outcomes in healthcare education. Discover how we've impacted 160,000+ individuals through mentorship programs, research opportunities, and career development initiatives. View detailed metrics, community impact data from 900 volunteers across 106 countries.",
   keywords: [
-    "Dr. Interested impact report 2025",
+    "Dr. Interested 2025 annual impact report",
     "healthcare education impact assessment",
     "high school medical mentorship results",
     "student healthcare career development outcomes",
@@ -41,7 +41,12 @@ export const metadata: Metadata = {
     "student healthcare research achievements",
     "healthcare education statistics 2025",
     "medical mentorship program ROI",
-    "student healthcare engagement metrics",
+    "367 executives healthcare education",
+    "1400 members Dr. Interested",
+    "106 countries healthcare impact",
+    "160000 impacted healthcare education",
+    "400 mentor hours healthcare",
+    "900 volunteers healthcare education",
     "healthcare career pipeline development",
     "medical education outreach impact",
     "healthcare diversity initiatives results",
@@ -51,39 +56,39 @@ export const metadata: Metadata = {
     "healthcare workforce preparation impact",
   ],
   authors: [
-    { name: "Dr. Interested Team", url: "https://drinterested.org/members" },
     { name: "Adil Mukhi", url: "https://drinterested.org/members" },
+    { name: "Dr. Interested Team", url: "https://drinterested.org/members" },
   ],
-  creator: "Dr. Interested - Student-Led Healthcare Education Organization",
+  creator: "Adil Mukhi - Founder and Executive Director, Dr. Interested",
   publisher: "Dr. Interested",
   category: "Education",
   classification: "Healthcare Education Impact Report",
   openGraph: {
     type: "article",
     locale: "en_US",
-    url: "https://impact2025.drinterested.org",
-    title: "Dr. Interested 2025 Semi-Annual Impact Report - Transforming Healthcare Education",
+    url: "https://impact.drinterested.org",
+    title: "Dr. Interested 2025 Annual Impact Report - Transforming Healthcare Education",
     description:
-      "Discover how Dr. Interested empowered 500+ high school students in healthcare careers through our comprehensive 2025 impact report. View detailed metrics, success stories, and program outcomes that demonstrate our commitment to building a diverse healthcare workforce.",
+      "Discover how Dr. Interested impacted 160,000+ individuals across 106 countries through healthcare education. View comprehensive metrics from 367 executives, 1400 members, 900 volunteers, and 400+ mentor hours. Our 2025 annual impact report demonstrates our commitment to building a diverse, accessible healthcare workforce.",
     siteName: "Dr. Interested Impact Report",
     images: [
       {
-        url: "https://impact2025.drinterested.org/impact-report-preview.png",
+        url: "https://impact.drinterested.org/impact-report-preview.png",
         width: 1200,
         height: 1200,
-        alt: "Dr. Interested 2025 Semi-Annual Impact Report - First Half of 2025 - Healthcare Education Impact Assessment with Table of Contents",
+        alt: "Dr. Interested 2025 Annual Impact Report - Comprehensive Healthcare Education Impact Assessment",
         type: "image/png",
       },
       {
-        url: "https://impact2025.drinterested.org/impact-report-preview.png",
+        url: "https://impact.drinterested.org/impact-report-preview.png",
         width: 800,
         height: 800,
-        alt: "Dr. Interested Impact Report Cover",
+        alt: "Dr. Interested 2025 Annual Impact Report Cover",
         type: "image/png",
       },
     ],
     article: {
-      publishedTime: "2025-01-01T00:00:00.000Z",
+      publishedTime: "2026-01-07T00:00:00.000Z",
       modifiedTime: new Date().toISOString(),
       section: "Healthcare Education",
       tags: [
@@ -97,6 +102,8 @@ export const metadata: Metadata = {
         "student success metrics",
         "healthcare diversity",
         "career development",
+        "annual impact",
+        "healthcare education 2025",
       ],
       authors: ["https://drinterested.org/members"],
     },
@@ -105,22 +112,22 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@DrInterested",
     creator: "@DrInterested",
-    title: "Dr. Interested 2025 Impact Report - Empowering Future Healthcare Professionals",
+    title: "Dr. Interested 2025 Annual Impact Report - Healthcare Education Excellence",
     description:
-      "📊 Our 2025 Semi-Annual Impact Report is here! Discover how we've empowered 500+ students to explore healthcare careers. #HealthcareEducation #StudentMentorship #MedicalCareers",
+      "📊 Our 2025 Annual Impact Report is here! 160,000+ impacted | 900 volunteers | 106 countries | 367 executives | 1400 members. Discover how we're transforming healthcare education. #HealthcareEducation #ImpactReport #StudentMentorship",
     images: [
       {
-        url: "https://impact2025.drinterested.org/impact-report-preview.png",
-        alt: "Dr. Interested 2025 Semi-Annual Impact Report - First Half of 2025",
+        url: "https://impact.drinterested.org/impact-report-preview.png",
+        alt: "Dr. Interested 2025 Annual Impact Report",
         width: 1200,
         height: 1200,
       },
     ],
   },
   alternates: {
-    canonical: "https://impact2025.drinterested.org",
+    canonical: "https://impact.drinterested.org",
     languages: {
-      "en-US": "https://impact2025.drinterested.org",
+      "en-US": "https://impact.drinterested.org",
     },
   },
   robots: {
@@ -143,9 +150,9 @@ export const metadata: Metadata = {
   ],
   manifest: "/site.webmanifest",
   generator: "Next.js",
-  applicationName: "Dr. Interested Impact Report",
+  applicationName: "Dr. Interested Annual Impact Report",
   referrer: "origin-when-cross-origin",
-  metadataBase: new URL("https://impact2025.drinterested.org"),
+  metadataBase: new URL("https://impact.drinterested.org"),
   verification: {
     google: "google-site-verification-code",
     yandex: "yandex-verification-code",
@@ -178,23 +185,34 @@ export const viewport: Viewport = {
 const impactReportSchema = {
   "@context": "https://schema.org",
   "@type": "Report",
-  "@id": "https://impact2025.drinterested.org/#report",
-  name: "Dr. Interested 2025 Semi-Annual Impact Report",
-  headline: "Dr. Interested 2025 Semi-Annual Impact Report - Healthcare Education Outcomes",
+  "@id": "https://impact.drinterested.org/#report",
+  name: "Dr. Interested 2025 Annual Impact Report",
+  headline: "Dr. Interested 2025 Annual Impact Report - Healthcare Education Outcomes",
   description:
-    "Comprehensive impact assessment of Dr. Interested's healthcare education programs, showcasing student outcomes, program growth, and community impact metrics for July-December 2024.",
-  url: "https://impact2025.drinterested.org",
-  datePublished: "2025-01-01T00:00:00.000Z",
+    "Comprehensive impact assessment of Dr. Interested's healthcare education programs from January 7, 2025 to January 7, 2026, showcasing 160,000+ individuals impacted, 900 volunteers, 367 executives, 1400 members across 106 countries, and 400+ mentor hours.",
+  url: "https://impact.drinterested.org",
+  datePublished: "2026-01-07T00:00:00.000Z",
   dateModified: new Date().toISOString(),
   inLanguage: "en-US",
   image: {
     "@type": "ImageObject",
-    url: "https://impact2025.drinterested.org/impact-report-preview.png",
+    url: "https://impact.drinterested.org/impact-report-preview.png",
     width: 1200,
     height: 1200,
-    caption: "Dr. Interested 2025 Semi-Annual Impact Report Cover",
+    caption: "Dr. Interested 2025 Annual Impact Report Cover",
   },
   author: {
+    "@type": "Person",
+    name: "Adil Mukhi",
+    jobTitle: "Founder and Executive Director",
+    url: "https://drinterested.org/members",
+    organization: {
+      "@type": "Organization",
+      name: "Dr. Interested",
+      url: "https://drinterested.org",
+    },
+  },
+  contributor: {
     "@type": "Organization",
     name: "Dr. Interested",
     url: "https://drinterested.org",
@@ -211,7 +229,7 @@ const impactReportSchema = {
     url: "https://drinterested.org",
     logo: {
       "@type": "ImageObject",
-      url: "https://impact2025.drinterested.org/logo.png",
+      url: "https://impact.drinterested.org/logo.png",
       width: 1200,
       height: 1200,
     },
@@ -249,7 +267,7 @@ const impactReportSchema = {
   },
   potentialAction: {
     "@type": "ReadAction",
-    target: "https://impact2025.drinterested.org",
+    target: "https://impact.drinterested.org",
   },
 }
 
@@ -260,8 +278,8 @@ const organizationSchema = {
   name: "Dr. Interested",
   alternateName: ["Dr Interested", "Doctor Interested"],
   url: "https://drinterested.org",
-  logo: "https://impact2025.drinterested.org/logo.png",
-  image: "https://impact2025.drinterested.org/impact-report-preview.png",
+  logo: "https://impact.drinterested.org/logo.png",
+  image: "https://impact.drinterested.org/impact-report-preview.png",
   description:
     "Dr. Interested is a student-led organization dedicated to empowering high school students to explore careers in healthcare through comprehensive education, mentorship programs, and hands-on experiences.",
   foundingDate: "2020",
@@ -385,13 +403,13 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 2,
       name: "Impact Reports",
-      item: "https://impact2025.drinterested.org",
+      item: "https://impact.drinterested.org",
     },
     {
       "@type": "ListItem",
       position: 3,
-      name: "2025 Semi-Annual Report",
-      item: "https://impact2025.drinterested.org",
+      name: "2025 Annual Report",
+      item: "https://impact.drinterested.org",
     },
   ],
 }
@@ -399,11 +417,11 @@ const breadcrumbSchema = {
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "@id": "https://impact2025.drinterested.org/#website",
-  url: "https://impact2025.drinterested.org",
-  name: "Dr. Interested 2025 Impact Report",
+  "@id": "https://impact.drinterested.org/#website",
+  url: "https://impact.drinterested.org",
+  name: "Dr. Interested 2025 Annual Impact Report",
   description:
-    "Comprehensive impact assessment showcasing Dr. Interested's healthcare education program outcomes and student success metrics",
+    "Comprehensive impact assessment showcasing Dr. Interested's healthcare education program outcomes across 160,000+ individuals, 900 volunteers, and 106 countries",
   publisher: {
     "@type": "Organization",
     name: "Dr. Interested",
@@ -411,12 +429,12 @@ const websiteSchema = {
   },
   potentialAction: {
     "@type": "SearchAction",
-    target: "https://impact2025.drinterested.org/?q={search_term_string}",
+    target: "https://impact.drinterested.org/?q={search_term_string}",
     "query-input": "required name=search_term_string",
   },
   mainEntity: {
     "@type": "Report",
-    name: "Dr. Interested 2025 Semi-Annual Impact Report",
+    name: "Dr. Interested 2025 Annual Impact Report",
   },
 }
 
@@ -426,18 +444,18 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "What is Dr. Interested's 2025 Semi-Annual Impact Report?",
+      name: "What is Dr. Interested's 2025 Annual Impact Report?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Dr. Interested's 2025 Semi-Annual Impact Report is a comprehensive assessment of our healthcare education programs' effectiveness from July-December 2024, showcasing student outcomes, program growth metrics, and community impact data.",
+        text: "Dr. Interested's 2025 Annual Impact Report is a comprehensive assessment of our healthcare education programs' effectiveness from January 7, 2025 to January 7, 2026, showcasing 160,000+ individuals impacted, program growth metrics, and global community impact data across 106 countries.",
       },
     },
     {
       "@type": "Question",
-      name: "How many students has Dr. Interested impacted?",
+      name: "How many individuals has Dr. Interested impacted?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Dr. Interested has empowered over 500 high school students to explore healthcare careers through our mentorship programs, educational initiatives, and hands-on experiences.",
+        text: "Dr. Interested has impacted 160,000+ individuals through our comprehensive healthcare education programs, volunteer initiatives, and mentorship experiences. Our organization includes 367 executives, 1400 members, 900 volunteers across 106 countries.",
       },
     },
     {
@@ -492,8 +510,8 @@ export default function RootLayout({
         <meta name="designer" content="Dr. Interested Team" />
         <meta name="reply-to" content="admin@drinterested.org" />
         <meta name="owner" content="Dr. Interested" />
-        <meta name="url" content="https://impact2025.drinterested.org" />
-        <meta name="identifier-URL" content="https://impact2025.drinterested.org" />
+        <meta name="url" content="https://impact.drinterested.org" />
+        <meta name="identifier-URL" content="https://impact.drinterested.org" />
         <meta name="directory" content="submission" />
         <meta name="pagename" content="Dr. Interested 2025 Impact Report" />
         <meta name="category" content="Healthcare Education" />
@@ -516,10 +534,10 @@ export default function RootLayout({
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-6MYCRFPPGE', {
-              page_title: 'Dr. Interested 2025 Impact Report',
-              page_location: 'https://impact2025.drinterested.org',
+              page_title: 'Dr. Interested 2025 Annual Impact Report',
+              page_location: 'https://impact.drinterested.org',
               content_group1: 'Impact Report',
-              content_group2: '2025 Semi-Annual',
+              content_group2: '2025 Annual',
               custom_map: {
                 'custom_parameter_1': 'healthcare_education',
                 'custom_parameter_2': 'student_mentorship'
@@ -529,7 +547,7 @@ export default function RootLayout({
             // Enhanced ecommerce tracking for engagement
             gtag('event', 'page_view', {
               page_title: 'Dr. Interested 2025 Impact Report',
-              page_location: 'https://impact2025.drinterested.org',
+              page_location: 'https://impact.drinterested.org',
               content_group1: 'Impact Report',
               content_group2: 'Healthcare Education'
             });
@@ -573,9 +591,9 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://drinterested.org" />
 
         {/* Canonical and alternate links */}
-        <link rel="canonical" href="https://impact2025.drinterested.org" />
-        <link rel="alternate" hrefLang="en-US" href="https://impact2025.drinterested.org" />
-        <link rel="alternate" hrefLang="x-default" href="https://impact2025.drinterested.org" />
+        <link rel="canonical" href="https://impact.drinterested.org" />
+        <link rel="alternate" hrefLang="en-US" href="https://impact.drinterested.org" />
+        <link rel="alternate" hrefLang="x-default" href="https://impact.drinterested.org" />
 
         {/* Favicon and app icons */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -605,8 +623,8 @@ export default function RootLayout({
                 itemProp="description"
                 content="Comprehensive impact assessment of Dr. Interested's healthcare education programs"
               />
-              <meta itemProp="url" content="https://impact2025.drinterested.org" />
-              <meta itemProp="image" content="https://impact2025.drinterested.org/impact-report-preview.png" />
+              <meta itemProp="url" content="https://impact.drinterested.org" />
+              <meta itemProp="image" content="https://impact.drinterested.org/impact-report-preview.png" />
               {children}
             </main>
             <Footer />
