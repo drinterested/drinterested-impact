@@ -1,18 +1,18 @@
 import type { Metadata } from "next"
-import AnnualReportClient from "./2025/annual/annual-client"
+import AnnualReportClient from "./annual-client"
 
 export const metadata: Metadata = {
   title: "Dr. Interested 2025 Annual Impact Report | Healthcare Education Impact Assessment",
   description:
     "Explore Dr. Interested's comprehensive 2025 Annual Impact Report (January 7, 2025 - January 7, 2026) showcasing 160,000+ individuals impacted, 900 volunteers, 367 executives across 106 countries. Discover our measurable outcomes in healthcare education, mentorship programs, and global workforce development.",
   alternates: {
-    canonical: "https://impact.drinterested.org",
+    canonical: "https://impact.drinterested.org/2025/annual",
   },
   openGraph: {
     title: "Dr. Interested 2025 Annual Impact Report - Transforming Global Healthcare Education",
     description:
       "Our comprehensive 2025 Annual Impact Report reveals how Dr. Interested has impacted 160,000+ individuals across 106 countries. Discover detailed program metrics, community outcomes, and evidence-based results from 367 executives, 1400 members, and 900 volunteers in healthcare education.",
-    url: "https://impact.drinterested.org",
+    url: "https://impact.drinterested.org/2025/annual",
     siteName: "Dr. Interested Impact Report",
     images: [
       {
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
   },
 }
 
-export default function ImpactReportPage() {
+export default function AnnualReportPage() {
   return (
     <>
       <script
@@ -83,8 +83,8 @@ export default function ImpactReportPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebPage",
-            "@id": "https://impact.drinterested.org/#webpage",
-            url: "https://impact.drinterested.org",
+            "@id": "https://impact.drinterested.org/2025/annual#webpage",
+            url: "https://impact.drinterested.org/2025/annual",
             name: "Dr. Interested 2025 Annual Impact Report",
             description:
               "Comprehensive annual impact assessment showcasing Dr. Interested's healthcare education program outcomes across 160,000+ individuals globally",
@@ -112,8 +112,8 @@ export default function ImpactReportPage() {
                 {
                   "@type": "ListItem",
                   position: 2,
-                  name: "2025 Impact Report",
-                  item: "https://impact.drinterested.org",
+                  name: "2025 Annual Impact Report",
+                  item: "https://impact.drinterested.org/2025/annual",
                 },
               ],
             },
