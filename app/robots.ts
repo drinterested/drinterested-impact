@@ -19,7 +19,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/", "/admin/", "/_next/", "/private/"],
       },
     ],
-    sitemap: "https://impact2025.drinterested.org/sitemap.xml",
-    host: "https://impact2025.drinterested.org",
+    sitemap: "https://impact.drinterested.org/sitemap.xml",
+    host: "https://impact.drinterested.org",
   }
 }

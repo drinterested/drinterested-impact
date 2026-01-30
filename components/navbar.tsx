@@ -71,7 +71,7 @@ export default function Navbar() {
         {/* Center Section - Report Title */}
         <div className="hidden lg:flex items-center">
           <div className="text-center">
-            <div className="text-sm font-semibold text-[#405862]">2025 Semi-Annual</div>
+            <div className="text-sm font-semibold text-[#405862]">2025 Annual</div>
             <div className="text-xs text-gray-600">Impact Report</div>
           </div>
         </div>
@@ -80,7 +80,7 @@ export default function Navbar() {
         <div className="flex items-center gap-3">
           <div className="hidden md:flex items-center gap-1 text-xs text-gray-600 bg-[#4ecdc4]/10 px-3 py-1 rounded-full">
             <div className="w-2 h-2 bg-[#4ecdc4] rounded-full animate-pulse" />
-            <span>Latest Report</span>
+            <span>Comprehensive Impact</span>
           </div>
 
           <div className="flex items-center gap-2" role="group" aria-label="Social media links">
