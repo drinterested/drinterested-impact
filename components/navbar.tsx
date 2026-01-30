@@ -3,11 +3,22 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
+import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
-import { ArrowLeft, Instagram, Linkedin, ExternalLink } from "lucide-react"
+import { ArrowLeft, Instagram, Linkedin, ExternalLink, ChevronDown } from "lucide-react"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
+  const pathname = usePathname()
 
   // Add scroll effect
   useEffect(() => {
@@ -24,6 +35,13 @@ export default function Navbar() {
       window.removeEventListener("scroll", handleScroll)
     }
   }, [])
+
+  // Determine current report from pathname
+  const getCurrentReportLabel = () => {
+    if (pathname.includes("2025/semi-annual")) return "2025 Semi-Annual"
+    if (pathname.includes("2025/annual") || pathname === "/") return "2025 Annual"
+    return "Reports"
+  }
 
   return (
     <header
@@ -68,12 +86,51 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Center Section - Report Title */}
+        {/* Center Section - Report Dropdown */}
         <div className="hidden lg:flex items-center">
-          <div className="text-center">
-            <div className="text-sm font-semibold text-[#405862]">2025 Annual</div>
-            <div className="text-xs text-gray-600">Impact Report</div>
-          </div>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <button className="flex items-center gap-2 text-center px-3 py-2 rounded-lg hover:bg-[#4ecdc4]/10 transition-colors group">
+                <div>
+                  <div className="text-sm font-semibold text-[#405862] group-hover:text-[#4ecdc4] transition-colors">
+                    {getCurrentReportLabel()}
+                  </div>
+                  <div className="text-xs text-gray-600">Impact Report</div>
+                </div>
+                <ChevronDown className="h-4 w-4 text-[#405862] group-hover:text-[#4ecdc4] transition-colors" />
+              </button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="center" className="w-56">
+              <DropdownMenuLabel className="text-[#405862]">Select Year & Report</DropdownMenuLabel>
+              <DropdownMenuSeparator />
+
+              <DropdownMenuGroup>
+                <DropdownMenuLabel className="text-xs font-semibold text-gray-500">2025</DropdownMenuLabel>
+                <DropdownMenuItem asChild>
+                  <Link href="/" className="cursor-pointer hover:bg-[#4ecdc4]/10">
+                    Annual Report
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/2025/semi-annual" className="cursor-pointer hover:bg-[#4ecdc4]/10">
+                    Semi-Annual Report
+                  </Link>
+                </DropdownMenuItem>
+              </DropdownMenuGroup>
+
+              <DropdownMenuSeparator />
+
+              <DropdownMenuGroup>
+                <DropdownMenuLabel className="text-xs font-semibold text-gray-500">2026</DropdownMenuLabel>
+                <DropdownMenuItem disabled className="text-gray-400 cursor-not-allowed">
+                  Annual Report (Coming Soon)
+                </DropdownMenuItem>
+                <DropdownMenuItem disabled className="text-gray-400 cursor-not-allowed">
+                  Semi-Annual Report (Coming Soon)
+                </DropdownMenuItem>
+              </DropdownMenuGroup>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
 
         {/* Right Section - Social Links and Actions */}
