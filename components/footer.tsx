@@ -88,7 +88,18 @@ export default function Footer() {
             <h3 className="font-semibold text-lg mb-4 text-[#4ecdc4]">Impact Reports</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/" className="text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+                <Link
+                  href="/2025/annual"
+                  className="text-gray-300 hover:text-white transition-colors flex items-center gap-1"
+                >
+                  2025 Annual Report
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/2025/semi-annual"
+                  className="text-gray-300 hover:text-white transition-colors flex items-center gap-1"
+                >
                   2025 Semi-Annual Report
                 </Link>
               </li>
@@ -172,7 +183,7 @@ export default function Footer() {
             <div className="text-gray-300 text-sm">
               <p>© {currentYear} Dr. Interested. All rights reserved.</p>
             </div>
-            <div className="flex items-center gap-6 text-sm">
+            <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm">
               <Link
                 href="https://www.drinterested.org/privacy-policy"
                 className="text-gray-300 hover:text-white transition-colors"
@@ -188,6 +199,30 @@ export default function Footer() {
                 rel="noopener noreferrer"
               >
                 Terms of Service
+              </Link>
+              <Link
+                href="https://www.drinterested.org/ai-policy"
+                className="text-gray-300 hover:text-white transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                AI Policy
+              </Link>
+              <Link
+                href="https://www.drinterested.org/safeguarding-policy"
+                className="text-gray-300 hover:text-white transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Safeguarding Policy
+              </Link>
+              <Link
+                href="https://www.drinterested.org/media-consent"
+                className="text-gray-300 hover:text-white transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Media Consent
               </Link>
             </div>
           </div>

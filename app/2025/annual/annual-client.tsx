@@ -146,7 +146,7 @@ export default function AnnualReportClient() {
                           navigator.share({
                             title: "Dr. Interested 2025 Annual Impact Report",
                             text: "Check out Dr. Interested's comprehensive 2025 annual impact report showcasing 160,000+ individuals impacted across 106 countries!",
-                            url: "https://impact.drinterested.org",
+                            url: "https://impact.drinterested.org/2025/annual",
                           })
                         }
                       }}

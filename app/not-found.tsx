@@ -1,6 +1,12 @@
+import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowLeft, Home } from "lucide-react"
+
+export const metadata: Metadata = {
+  title: "Page Not Found",
+  robots: { index: false, follow: true },
+}
 
 export default function NotFound() {
   return (
@@ -19,8 +25,8 @@ export default function NotFound() {
         <h1 className="text-6xl font-bold text-[#405862] mb-4">404</h1>
         <h2 className="text-2xl font-semibold text-[#405862] mb-4">Page Not Found</h2>
         <p className="text-gray-600 mb-8 leading-relaxed">
-          The page you're looking for doesn't exist. This impact report site only contains our 2025 Semi-Annual Impact
-          Report.
+          The page you're looking for doesn't exist. This site hosts Dr. Interested's 2025 Annual and Semi-Annual Impact
+          Reports.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

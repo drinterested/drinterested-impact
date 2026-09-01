@@ -1,185 +1,248 @@
-// SEO utility functions for structured data and metadata
 import type { Metadata } from "next"
 
-type SeoProps = {
+export interface SEOConfig {
   title: string
   description: string
-  url: string
-  ogImage?: string
+  keywords?: string[]
+  image?: string
+  url?: string
   type?: "website" | "article"
   publishedTime?: string
   modifiedTime?: string
-  authors?: string[]
-  tags?: string[]
+  author?: string
+  section?: string
+  /**
+   * A short, comma-separated list of the article's core topics (Google's legacy
+   * news_keywords meta tag — still an optional signal for Top Stories eligibility on
+   * timely content). Distinct from the general `keywords` list, which is longer/broader.
+   */
+  newsKeywords?: string[]
 }
 
-export function generateSeoMetadata({
-  title,
-  description,
-  url,
-  ogImage = "/circle-logo.png",
-  type = "website",
-  publishedTime,
-  modifiedTime,
-  authors,
-  tags,
-}: SeoProps): Metadata {
-  return {
+export function generateSeoMetadata(config: SEOConfig): Metadata {
+  const {
     title,
     description,
+    keywords = [],
+    image = "/impact-report-preview.png",
+    url,
+    type = "website",
+    publishedTime,
+    modifiedTime,
+    author,
+    section,
+    newsKeywords,
+  } = config
+
+  const metadata: Metadata = {
+    title,
+    description,
+    keywords: keywords.join(", "),
     openGraph: {
       title,
       description,
+      type: type === "article" ? "article" : "website",
       url,
-      siteName: "Dr. Interested",
       images: [
         {
-          url: ogImage,
+          url: image,
           width: 1200,
-          height: 630,
+          height: 1200,
           alt: title,
         },
       ],
+      siteName: "Dr. Interested Impact Report",
       locale: "en_US",
-      type,
-      ...(type === "article" && {
-        article: {
-          publishedTime,
-          modifiedTime,
-          authors: authors?.map((author) => `https://www.drinterested.org/members#${author}`),
-          tags,
-        },
-      }),
     },
+
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: [ogImage],
+      images: [image],
       creator: "@DrInterested",
     },
-    alternates: {
-      canonical: url,
-    },
-    keywords: [
-      "healthcare education",
-      "medical careers",
-      "high school students",
-      "healthcare mentorship",
-      "medical research",
-      "Dr. Interested",
-      "healthcare internships",
-      "medical technology",
-      "high school club",
-      "volunteer hours",
-      "healthcare volunteer",
-      "student-led organization",
-    ].concat(tags || []),
   }
+
+  if (type === "article" && publishedTime) {
+    metadata.openGraph = {
+      ...metadata.openGraph,
+      type: "article",
+      publishedTime,
+      modifiedTime,
+      authors: author ? [author] : undefined,
+      section,
+    }
+  }
+
+  if (url) {
+    metadata.alternates = {
+      canonical: url,
+    }
+  }
+
+  if (newsKeywords && newsKeywords.length > 0) {
+    metadata.other = {
+      ...metadata.other,
+      news_keywords: newsKeywords.join(", "),
+    }
+  }
+
+  return metadata
 }
 
+/**
+ * The canonical Dr. Interested Organization node. Kept byte-identical to the copy on the
+ * main site (drinterested.org) so the two properties describe the same entity to search
+ * engines. Update both together.
+ */
 export function generateOrganizationSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Dr. Interested",
+    alternateName: ["Dr Interested", "Doctor Interested", "Dr. Int"],
+    description:
+      "A youth-led global pre-med community helping students explore the vast world of healthcare, research, and advocacy. We support youth in finding their unique 'spark' in medicine through interactive programs, publishing opportunities, and leadership development.",
     url: "https://www.drinterested.org",
-    logo: "https://www.drinterested.org/logo.png",
+    logo: "https://www.drinterested.org/android-chrome-512x512.png",
+    image: "https://www.drinterested.org/websitebanner.jpg",
+    foundingDate: "2024",
+    founder: {
+      "@type": "Person",
+      name: "Adil Mukhi",
+      jobTitle: "Founder & Executive Director",
+    },
     sameAs: [
       "https://www.instagram.com/dr.interested/",
-      "https://www.linkedin.com/company/dr-interested",
+      "https://www.linkedin.com/company/dr-interested/",
+      "https://www.youtube.com/@Dr.Interested",
+      "https://open.spotify.com/show/6SLlRUL6co6fPxckAdrigf",
       "https://discord.gg/pzbGRgsGXY",
+      "https://www.facebook.com/profile.php?id=61572438387454",
+      "https://www.threads.com/@dr.interested",
+      "https://bsky.app/profile/drinterested.org",
+      "https://x.com/Dr_Interested_",
+      "https://www.tiktok.com/@dr.interested",
+      "https://mastodon.social/@drinterested",
+      "https://news.impact.drinterested.org/",
+      "https://www.drinterested.org/annualreport2025.pdf",
+      "https://impact.drinterested.org/2025/annual",
+      "https://impact.drinterested.org",
+      "https://chess.drinterested.org/",
     ],
-    description:
-      "Dr. Interested is a student-led organization empowering high school students to explore careers in healthcare through education, research, and mentorship.",
-    contactPoint: {
-      "@type": "ContactPoint",
-      email: "admin@drinterested.org",
-      contactType: "customer service",
+    hasPart: [
+      {
+        "@type": "WebSite",
+        name: "Simmon Chang Chess (Against Cancer) Club",
+        url: "https://chess.drinterested.org",
+        description:
+          "The Dr. Interested Simmon Chang Chess (Against Cancer) Club — tournaments and initiatives supporting pediatric cancer research.",
+      },
+      {
+        "@type": "WebSite",
+        name: "2025 Annual Impact Report",
+        url: "https://impact.drinterested.org/2025/annual",
+        description:
+          "Dr. Interested's 2025 Annual Impact Report showcasing impact metrics including 160,000+ youth impacted, 106 countries reached, 1,400+ members, 20+ events, 400+ mentor hours, and 900 volunteers.",
+      },
+    ],
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        contactType: "General Inquiry",
+        email: "admin@drinterested.org",
+      },
+      {
+        "@type": "ContactPoint",
+        contactType: "Human Resources",
+        email: "hr@drinterested.org",
+      },
+      {
+        "@type": "ContactPoint",
+        contactType: "Finance & Sponsorships",
+        email: "finance@drinterested.org",
+      },
+      {
+        "@type": "ContactPoint",
+        contactType: "Outreach",
+        email: "outreach@drinterested.org",
+      },
+    ],
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "Global",
     },
-    keywords: "healthcare education, medical careers, high school students, volunteer hours, healthcare mentorship",
-  }
-}
-
-export function generateEventSchema(event: {
-  name: string
-  description: string
-  startDate: string
-  endDate?: string
-  location: string
-  url: string
-  image?: string
-  organizer?: string
-}) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "Event",
-    name: event.name,
-    description: event.description,
-    startDate: event.startDate,
-    ...(event.endDate && { endDate: event.endDate }),
-    location: {
-      "@type": "Place",
-      name: event.location,
-      ...(event.location.toLowerCase().includes("virtual") && {
-        "@type": "VirtualLocation",
-      }),
+    slogan: "Inspiring the Next Generation of Healthcare Professionals",
+    numberOfEmployees: {
+      "@type": "QuantitativeValue",
+      value: 367,
     },
-    organizer: {
+    memberOf: {
       "@type": "Organization",
-      name: event.organizer || "Dr. Interested",
-      url: "https://www.drinterested.org",
+      name: "Healthcare Education Community",
     },
-    image: event.image || "https://www.drinterested.org/logo.png",
-    url: event.url,
+    knowsAbout: [
+      "Healthcare Education",
+      "Medical Careers",
+      "Student Mentorship",
+      "Healthcare Research",
+      "Medical Technology",
+      "Healthcare Leadership",
+      "Pre-Medical Education",
+      "Youth Healthcare Programs",
+      "Medical Volunteering",
+      "Healthcare Advocacy",
+    ],
+    areaServed: {
+      "@type": "Place",
+      name: "Worldwide",
+    },
+    audience: {
+      "@type": "EducationalAudience",
+      educationalRole: "High School Students",
+    },
   }
 }
 
 export function generateArticleSchema(article: {
-  headline: string
+  title: string
   description: string
-  image: string
-  datePublished: string
-  dateModified?: string
-  authorName: string
-  authorUrl?: string
-  publisherName?: string
-  publisherLogo?: string
+  author: string
+  publishedDate: string
+  modifiedDate?: string
+  image?: string
   url: string
-  keywords?: string[]
 }) {
   return {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: article.headline,
+    headline: article.title,
     description: article.description,
-    image: article.image,
-    datePublished: article.datePublished,
-    dateModified: article.dateModified || article.datePublished,
     author: {
       "@type": "Person",
-      name: article.authorName,
-      url:
-        article.authorUrl ||
-        `https://www.drinterested.org/members#${article.authorName.toLowerCase().replace(/\s+/g, "-")}`,
+      name: article.author,
     },
     publisher: {
       "@type": "Organization",
-      name: article.publisherName || "Dr. Interested",
+      name: "Dr. Interested",
       logo: {
         "@type": "ImageObject",
-        url: article.publisherLogo || "https://www.drinterested.org/circle-logo.png",
+        url: "https://www.drinterested.org/android-chrome-512x512.png",
       },
     },
+    datePublished: article.publishedDate,
+    dateModified: article.modifiedDate || article.publishedDate,
+    image: article.image || "https://impact.drinterested.org/impact-report-preview.png",
+    url: article.url,
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": article.url,
     },
-    keywords: article.keywords?.join(", ") || "healthcare education, medical careers, high school students",
   }
 }
 
-export function generateBreadcrumbSchema(items: { name: string; url: string }[]) {
+export function generateBreadcrumbSchema(items: Array<{ name: string; url: string }>) {
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -188,21 +251,6 @@ export function generateBreadcrumbSchema(items: { name: string; url: string }[])
       position: index + 1,
       name: item.name,
       item: item.url,
-    })),
-  }
-}
-
-export function generateFAQSchema(questions: { question: string; answer: string }[]) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: questions.map((q) => ({
-      "@type": "Question",
-      name: q.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: q.answer,
-      },
     })),
   }
 }
