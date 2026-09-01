@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "Dr. Interested 2025 Impact Report",
     short_name: "Dr. Interested Impact",
     description:
-      "Dr. Interested's comprehensive 2025 Annual Impact Report showcasing achievements in healthcare education across 160,000+ individuals in 106 countries with 367 executives, 1400 members, and 900 volunteers.",
+      "Dr. Interested's 2025 Annual Impact Report — achievements in healthcare education across 160,000+ individuals in 106 countries, with 367 executives, 1,400 members, and 900 volunteers.",
     start_url: "/",
     display: "standalone",
     background_color: "#ffffff",
@@ -16,31 +16,30 @@ export default function manifest(): MetadataRoute.Manifest {
     categories: ["education", "healthcare", "nonprofit"],
     icons: [
       {
-        src: "/favicon.ico",
-        sizes: "16x16 32x32 48x48",
-        type: "image/x-icon",
+        src: "/favicon-16x16.png",
+        sizes: "16x16",
+        type: "image/png",
       },
       {
-        src: "/favicon.ico",
-        sizes: "any",
-        type: "image/x-icon",
+        src: "/favicon-32x32.png",
+        sizes: "32x32",
+        type: "image/png",
       },
       {
-        src: "/circle-logo.png",
+        src: "/android-chrome-192x192.png",
         sizes: "192x192",
         type: "image/png",
-        purpose: "maskable",
       },
       {
-        src: "/circle-logo.png",
+        src: "/android-chrome-512x512.png",
+        sizes: "512x512",
+        type: "image/png",
+      },
+      {
+        src: "/android-chrome-512x512.png",
         sizes: "512x512",
         type: "image/png",
         purpose: "maskable",
-      },
-      {
-        src: "/circle-logo.png",
-        sizes: "180x180",
-        type: "image/png",
       },
     ],
   }
